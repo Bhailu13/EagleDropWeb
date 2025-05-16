@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eagle Drop - Account Deletion</title>
+  <title>Eagle Drop - Account</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & base */
     * {
       box-sizing: border-box;
     }
     body, html {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       height: 100vh;
       width: 100vw;
       font-family: 'Poppins', sans-serif;
@@ -23,13 +23,12 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
-      overflow-x: hidden;
     }
     .container {
       background: #fff;
       max-width: 700px;
       width: 100%;
-      padding: 3rem 3rem 4rem;
+      padding: 2rem;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       display: flex;
@@ -38,71 +37,34 @@
     }
     h1 {
       font-weight: 600;
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      margin-top:30rem;
-      background: #000;
-      -webkit-background-clip: text;
-      color: transparent;
-      letter-spacing: 3px;
-      word-break: break-word;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      color: #444;
-      word-break: break-word;
+      color: #000;
     }
     p {
       font-weight: 400;
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       line-height: 1.6;
       max-width: 560px;
       margin: 0 auto 1.6rem;
       color: #555;
-      word-break: break-word;
-    }
-    ul {
-      text-align: left;
-      max-width: 560px;
-      margin: 0 auto 2rem;
-      padding-left: 1.3rem;
-      color: #555;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      list-style: disc inside;
-      word-break: break-word;
-    }
-    ul li {
-      margin-bottom: 0.8rem;
-    }
-    a {
-      color: #0070c9;
-      text-decoration: none;
-      font-weight: 600;
-      word-break: break-word;
-    }
-    a:hover, a:focus {
-      text-decoration: underline;
     }
     .store-buttons {
-      margin-top: 2rem;
+      margin: 1.5rem 0 2rem;
       display: flex;
-      gap: 1.3rem;
+      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
       width: 100%;
       max-width: 400px;
     }
     .button {
-      flex: 1 1 150px;
+      flex: 1 1 140px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.9rem 1.6rem;
-      font-size: 1.1rem;
+      padding: 0.75rem 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
       border-radius: 10px;
       cursor: pointer;
@@ -110,11 +72,10 @@
       color: white;
       text-decoration: none;
       transition: background-color 0.3s ease, transform 0.15s ease;
-      user-select: none;
     }
     .button img {
-      height: 26px;
-      margin-right: 12px;
+      height: 24px;
+      margin-right: 10px;
     }
     .button.android {
       background-color: #34a853;
@@ -130,25 +91,56 @@
       background-color: #005a9e;
       transform: scale(1.05);
     }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 2rem 0 0.5rem;
+      color: #333;
+    }
+    .small-text {
+      font-size: 0.95rem;
+      color: #666;
+      max-width: 500px;
+    }
+    ul {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+      text-align: left;
+      padding-left: 1.2rem;
+      margin: 1rem auto;
+      max-width: 500px;
+    }
+    ul li {
+      margin-bottom: 0.6rem;
+    }
+    a {
+      color: #0070c9;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
     .footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
       color: #999;
-      max-width: 560px;
-      word-break: break-word;
+      max-width: 500px;
     }
     @media (max-width: 480px) {
       h1 {
-        font-size: 2.3rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
-      p, ul {
-        font-size: 1rem;
+        font-size: 2rem;
       }
       .button {
-        font-size: 1rem;
+        font-size: 0.95rem;
+      }
+      .section-title {
+        font-size: 1.1rem;
+      }
+      .small-text {
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -156,9 +148,9 @@
 <body>
   <div class="container" role="main">
     <h1>Eagle Drop</h1>
-    <p>Welcome! Please download the app from your preferred store to get started.</p>
+    <p>Download our app from your preferred store to get started:</p>
 
-    <nav class="store-buttons" role="navigation" aria-label="Download App Store Links">
+    <nav class="store-buttons" aria-label="App store links">
       <a href="https://play.google.com/store/apps/details?id=com.supercell.clashofclans" class="button android" target="_blank" rel="noopener noreferrer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" alt="Google Play Store" />
         Play Store
@@ -169,19 +161,23 @@
       </a>
     </nav>
 
-    <h2>Delete Your Eagle Drop Account</h2>
-    <p>If you wish to delete your Eagle Drop account and all associated personal data, please follow the steps below carefully:</p>
+    <div>
+      <div class="section-title">Delete Your Account</div>
+      <p class="small-text">To request account deletion, please:</p>
+      <ul>
+        <li>Email <a href="mailto:eagledrop.customer@gmail.com">eagledrop.customer@gmail.com</a> from your registered email.</li>
+        <li>Include your phone number and the subject <strong>"Delete Account"</strong>.</li>
+        <li>We will process it within <strong>7 business days</strong>.</li>
+      </ul>
+    </div>
 
-    <ul>
-      <li>Send an email to <a href="mailto:eagledrop.customer@gmail.com">eagledrop.customer@gmail.com</a> from the email address linked to your Eagle Drop account.</li>
-      <li>Include your registered phone number and the phrase <strong>"Delete Account"</strong> in the email subject.</li>
-      <li>We will process your request within <strong>7 business days</strong> and notify you once the deletion is complete.</li>
-    </ul>
+    <div>
+      <div class="section-title">Customer Support</div>
+      <p class="small-text">Need help or have questions? Reach out anytime at <a href="mailto:eagledrop.customer@gmail.com">eagledrop.customer@gmail.com</a>.</p>
+    </div>
 
-    <p>For more information on how we handle your data, please see our <a href="https://privacy-and-policy-ten.vercel.app/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
-
-    <div class="footer" aria-label="Footer information">
-      &copy; 2025 Eagle Drop &mdash; Available on Android and iOS
+    <div class="footer">
+      &copy; 2025 Eagle Drop — Available on Android and iOS
     </div>
   </div>
 </body>
