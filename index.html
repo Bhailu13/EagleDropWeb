@@ -13,7 +13,8 @@
     }
     body, html {
       margin: 0; padding: 0;
-      height: 100%;
+      height: 100vh;
+      width: 100vw;
       font-family: 'Poppins', sans-serif;
       background: #f9fafc;
       color: #222;
@@ -22,12 +23,13 @@
       align-items: center;
       text-align: center;
       padding: 2rem;
+      overflow-x: hidden;
     }
     .container {
       background: #fff;
       max-width: 700px;
       width: 100%;
-      padding: 3rem 2.5rem 4rem;
+      padding: 3rem 3rem 4rem;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
       display: flex;
@@ -42,6 +44,7 @@
       -webkit-background-clip: text;
       color: transparent;
       letter-spacing: 3px;
+      word-break: break-word;
     }
     h2 {
       font-weight: 600;
@@ -49,6 +52,7 @@
       margin-top: 3rem;
       margin-bottom: 1rem;
       color: #444;
+      word-break: break-word;
     }
     p {
       font-weight: 400;
@@ -57,6 +61,7 @@
       max-width: 560px;
       margin: 0 auto 1.6rem;
       color: #555;
+      word-break: break-word;
     }
     ul {
       text-align: left;
@@ -67,6 +72,7 @@
       font-size: 1.1rem;
       line-height: 1.6;
       list-style: disc inside;
+      word-break: break-word;
     }
     ul li {
       margin-bottom: 0.8rem;
@@ -75,6 +81,7 @@
       color: #0070c9;
       text-decoration: none;
       font-weight: 600;
+      word-break: break-word;
     }
     a:hover, a:focus {
       text-decoration: underline;
@@ -126,6 +133,8 @@
       margin-top: 3rem;
       font-size: 0.9rem;
       color: #999;
+      max-width: 560px;
+      word-break: break-word;
     }
     @media (max-width: 480px) {
       h1 {
@@ -148,7 +157,7 @@
     <h1>Eagle Drop</h1>
     <p>Welcome! Please download the app from your preferred store to get started.</p>
 
-    <div class="store-buttons" role="navigation" aria-label="Download App Store Links">
+    <nav class="store-buttons" role="navigation" aria-label="Download App Store Links">
       <a href="https://play.google.com/store/apps/details?id=com.supercell.clashofclans" class="button android" target="_blank" rel="noopener noreferrer">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" alt="Google Play Store" />
         Play Store
@@ -157,7 +166,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png" alt="Apple App Store" />
         App Store
       </a>
-    </div>
+    </nav>
 
     <h2>Delete Your Eagle Drop Account</h2>
     <p>If you wish to delete your Eagle Drop account and all associated personal data, please follow the steps below carefully:</p>
