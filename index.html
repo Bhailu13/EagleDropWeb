@@ -3,182 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eagle Drop - Account</title>
+  <title>Eagle Drop - Official App Page</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
-    }
-    body, html {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      width: 100vw;
-      font-family: 'Poppins', sans-serif;
-      background: #f9fafc;
-      color: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
     }
-    .container {
-      background: #fff;
-      max-width: 700px;
-      width: 100%;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 2rem;
     }
-    h1 {
-      font-weight: 600;
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #000;
-    }
-    p {
-      font-weight: 400;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      max-width: 560px;
-      margin: 0 auto 1.6rem;
-      color: #555;
-    }
-    .store-buttons {
-      margin: 1.5rem 0 2rem;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
+
+    .section {
       width: 100%;
-      max-width: 400px;
+      max-width: 800px;
+      background: linear-gradient(135deg, #1a152a, #111);
+      border: 1px solid #6b21a8;
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(107, 33, 168, 0.2);
     }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .store-buttons {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
     .button {
-      flex: 1 1 140px;
+      flex: 1 1 180px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.75rem 1.2rem;
+      padding: 0.8rem 1.4rem;
       font-size: 1rem;
       font-weight: 600;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-      color: white;
       text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.15s ease;
+      background-color: #333;
+      color: white;
+      transition: transform 0.2s ease, background 0.3s ease;
     }
+
     .button img {
       height: 24px;
       margin-right: 10px;
     }
-    .button.android {
-      background-color: #34a853;
-    }
-    .button.android:hover {
-      background-color: #2c8b45;
-      transform: scale(1.05);
-    }
-    .button.ios {
-      background-color: #0070c9;
-    }
-    .button.ios:hover {
-      background-color: #005a9e;
+
+    .button:hover {
+      background-color: #555;
       transform: scale(1.05);
     }
 
+    /* Enhanced second section with purple theme */
+    .purple-section {
+      width: 100%;
+      max-width: 800px;
+      background: linear-gradient(135deg, #1e1e2e 0%, #111 100%);
+      border: 1px solid #6b21a8;
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 0 20px rgba(107, 33, 168, 0.3);
+    }
+
     .section-title {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 600;
-      margin: 2rem 0 0.5rem;
-      color: #333;
+      margin-bottom: 1rem;
+      color: #fff;
     }
-    .small-text {
-      font-size: 0.95rem;
-      color: #666;
-      max-width: 500px;
+
+    p, ul {
+      font-size: 1rem;
+      color: #eee;
+      margin-bottom: 1.2rem;
     }
+
     ul {
-      font-size: 0.95rem;
-      line-height: 1.5;
-      color: #555;
-      text-align: left;
-      padding-left: 1.2rem;
-      margin: 1rem auto;
-      max-width: 500px;
+      padding-left: 1.5rem;
+      color: #ccc;
     }
+
     ul li {
       margin-bottom: 0.6rem;
     }
+
     a {
-      color: #0070c9;
+      color: #fff;
       text-decoration: none;
-      font-weight: 500;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+
     .footer {
       margin-top: 2rem;
       font-size: 0.85rem;
-      color: #999;
-      max-width: 500px;
+      color: #888;
+      text-align: center;
     }
-    @media (max-width: 480px) {
+
+    @media (max-width: 600px) {
       h1 {
         font-size: 2rem;
       }
+      .section, .purple-section {
+        padding: 1.5rem;
+      }
       .button {
-        font-size: 0.95rem;
-      }
-      .section-title {
-        font-size: 1.1rem;
-      }
-      .small-text {
-        font-size: 0.9rem;
+        flex: 1 1 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container" role="main">
+
+  <!-- Top Section: Logo + Name + Store Buttons -->
+  <div class="section">
+    <img src="icon_ios.png" alt="Eagle Drop Logo" class="logo" />
     <h1>Eagle Drop</h1>
-    <p>Download our app from your preferred store to get started:</p>
+    <p style="color: #bbb;">Download the app and get reliable delivery for documents, business materials, and more.</p>
 
-    <nav class="store-buttons" aria-label="App store links">
-      <a href="https://play.google.com/store/apps/details?id=com.supercell.clashofclans" class="button android" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" alt="Google Play Store" />
-        Play Store
+    <div class="store-buttons">
+      <a href="https://play.google.com/store/apps/details?id=com.bhailu13.EagleUI&pli=1" class="button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" alt="Play Store" />
+        Get on Play Store
       </a>
-      <a href="https://apps.apple.com/in/app/clash-of-clans/id529479190" class="button ios" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png" alt="Apple App Store" />
-        App Store
+      <a href="https://apps.apple.com/in/app/eagle-drop/id6745697884" class="button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png" alt="App Store" />
+        Get on App Store
       </a>
-    </nav>
-
-    <div>
-      <div class="section-title">Delete Your Account</div>
-      <p class="small-text">To request account deletion, please:</p>
-      <ul>
-        <li>Email <a href="mailto:eagledrop.customer@gmail.com">eagledrop.customer@gmail.com</a> from your registered email.</li>
-        <li>Include your phone number and the subject <strong>"Delete Account"</strong>.</li>
-        <li>We will process it within <strong>7 business days</strong>.</li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="section-title">Customer Support</div>
-      <p class="small-text">Need help or have questions? Reach out anytime at <a href="mailto:eagledrop.customer@gmail.com">eagledrop.customer@gmail.com</a>.</p>
-    </div>
-
-    <div class="footer">
-      &copy; 2025 Eagle Drop — Available on Android and iOS
     </div>
   </div>
+
+  <!-- Purple Themed Section: Description + Help + Deletion -->
+  <div class="purple-section">
+    <div class="section-title">About Eagle Drop</div>
+    <p>
+      Eagle Drop is your trusted delivery partner — offering fast, secure, and affordable solutions for personal and business logistics.
+      Whether you're a trader, student, or corporate user, we simplify local deliveries for documents, samples, and essentials.
+    </p>
+
+    <div class="section-title">Need Help?</div>
+    <p>
+      We’re here to assist you 24/7. For queries or support, email us at:
+      <a href="mailto:eagledrop.customer@gmail.com">eagledrop.customer@gmail.com</a>.
+    </p>
+
+    <div class="section-title">Delete Your Account</div>
+    <p>To permanently delete your account:</p>
+    <ul>
+      <li>Send an email from your registered ID to <a href="mailto:eagledrop.customer@gmail.com">eagledrop.customer@gmail.com</a></li>
+      <li>Use the subject: <strong>Delete Account</strong></li>
+      <li>Include your phone number in the email</li>
+      <li>We will respond within <strong>7 business days</strong></li>
+    </ul>
+
+    <div class="footer">
+      &copy; 2025 Eagle Drop — All rights reserved.
+    </div>
+  </div>
+
 </body>
 </html>
